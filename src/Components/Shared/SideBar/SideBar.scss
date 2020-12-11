@@ -4,8 +4,8 @@
 
 .sidebar-wrapper {
   @include flex(column);
-  height: 100vh;
-  width: 20%;
+  height: 100%;
+  width: 100%;
   padding: $generalPadding;
   background-color: $offWhite;
 }

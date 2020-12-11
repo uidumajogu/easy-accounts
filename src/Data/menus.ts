@@ -6,6 +6,7 @@ import DashboardPage from "../Components/Pages/DashboardPage/DashboardPage";
 import OpenAccountPage from "../Components/Pages/OpenAccountPage/OpenAccountPage";
 import { TMenu } from "../TypescriptUtils/Types";
 
+
 type TMenus = TMenu[]
 
 const menus:TMenus  = [

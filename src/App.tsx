@@ -5,16 +5,19 @@ import menus from "./Data/menus";
 
 
 
-const App = () => {
+const App = () =>
+{
+
   return (
     <BrowserRouter>
       <Switch>
         <Route exact={true} path="/" component={LandingPage} />
+        <Route exact={true} path="/" component={LandingPage} />
         {menus.map((menu) =><Route exact={true} path={menu.path} component={menu.component} /> 
-        )}
+          )}
         <Route exact={true} path="/404" component={PageNotFound} />
         <Redirect to="/404" />
-      </Switch>
+        </Switch>
     </BrowserRouter>
   );
 };
