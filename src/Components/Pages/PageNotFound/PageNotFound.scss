@@ -1,0 +1,32 @@
+@import "../../../SCSS/AppColors";
+@import "../../../SCSS/Mixins";
+
+.page-not-found-wrapper {
+  @include flex(column);
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 70vh;
+  padding: calc(20px + 5vw);
+
+  h1,
+  h3,
+  p {
+    text-align: center;
+    width: calc(150px + 30vw);
+  }
+
+  h1 {
+    color: $primaryColor;
+    font-size: calc(40px + 10vw);
+    text-align: center;
+    width: 100%;
+  }
+
+  h3 {
+    font-size: calc(8px + 2.25vw);
+  }
+  p {
+    font-size: calc(8px + 1.25vw);
+  }
+}

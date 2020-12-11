@@ -1,0 +1,57 @@
+@import "./SCSS/AppColors";
+
+body,
+html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #ffffff;
+}
+
+button {
+  cursor: pointer;
+}
+
+input,
+textarea,
+button {
+  outline: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::placeholder {
+  color: $blackColor;
+  opacity: 0.8;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}

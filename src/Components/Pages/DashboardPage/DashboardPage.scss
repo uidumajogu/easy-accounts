@@ -1,0 +1,17 @@
+@import "../../../SCSS/Mixins";
+
+.dashboard-page-wrapper {
+  @include flex(row);
+  height: 100vh;
+  width: 100vw;
+}
+
+.dashboard-page-left-section {
+  width: calc(100px + 15vw);
+  height: 100%;
+}
+
+.dashboard-page-right-section {
+  flex: 1;
+  height: 100%;
+}
