@@ -1,32 +1,37 @@
-import { FiBarChart } from "react-icons/fi";
-import { FiBookmark } from "react-icons/fi";
-import { FiShoppingBag } from "react-icons/fi";
+import { FiGrid } from "react-icons/fi";
+import { FiColumns } from "react-icons/fi";
+import { FiBriefcase } from "react-icons/fi";
 import { FiBookOpen } from "react-icons/fi";
-import { IconType } from "react-icons/lib";
+import DashboardPage from "../Components/Pages/DashboardPage/DashboardPage";
+import OpenAccountPage from "../Components/Pages/OpenAccountPage/OpenAccountPage";
+import { TMenu } from "../TypescriptUtils/Types";
 
-type TMenu = {icon: IconType, title: string, link:string}
 type TMenus = TMenu[]
 
 const menus:TMenus  = [
   {
-    icon: FiBarChart,
+    icon: FiGrid,
     title: "Dashboard",
-    link: "/dashboard",
-  },
-  {
-    icon: FiBookmark,
-    title: "Open Account",
-    link: "/open-account",
+    path: "/dashboard",
+    component: DashboardPage,
   },
   {
     icon: FiBookOpen,
-    title: "Set Limits",
-    link: "/set-limits",
+    title: "Open Account",
+    path: "/open-account",
+    component: OpenAccountPage,
   },
   {
-    icon: FiShoppingBag,
-    title: "Mandates",
-    link: "/mandate",
+    icon: FiColumns,
+    title: "Set Limit",
+    path: "/set-limit",
+    component: DashboardPage,
+  },
+  {
+    icon: FiBriefcase,
+    title: "Mandate",
+    path: "/mandate",
+    component: DashboardPage,
   },
 ];
 
