@@ -1,5 +1,5 @@
-@import "../../../SCSS/AppColors";
-@import "../../../SCSS/Mixins";
+@import "../../../SharedSCSS/Variables/AppColors";
+@import "../../../SharedSCSS/Variables/Mixins";
 
 .page-not-found-wrapper {
   @include flex(column);
@@ -17,7 +17,7 @@
   }
 
   h1 {
-    color: $primaryColor;
+    color: $primary;
     font-size: calc(40px + 10vw);
     text-align: center;
     width: 100%;

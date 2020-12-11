@@ -1,0 +1,34 @@
+@import "../../../SharedSCSS/Variables/Mixins";
+@import "../../../SharedSCSS/Variables/AppColors";
+@import "../../../SharedSCSS/Variables/Dimensions";
+
+.sidebar-wrapper {
+  @include flex(column);
+  height: 100vh;
+  width: 25%;
+  padding: $generalPadding;
+  background-color: $offWhite;
+}
+
+.sidebar-logo {
+  @include flex(row);
+  align-items: center;
+  h4 {
+    color: $primary;
+    margin-left: calc(3px + 0.3vw);
+  }
+}
+
+.sidebar-menu-wrapper {
+  padding-top: calc(20px + 0.5vh);
+
+  button {
+    @include flex(row);
+    align-items: center;
+    color: $lightGrey;
+  }
+
+  h5 {
+    margin-left: calc(3px + 0.3vw);
+  }
+}

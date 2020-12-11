@@ -1,4 +1,4 @@
-@import "../../../SCSS/Mixins";
+@import "../../../SharedSCSS/Variables/Mixins";
 
 .dashboard-page-wrapper {
   @include flex(row);

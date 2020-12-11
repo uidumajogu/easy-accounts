@@ -1,4 +1,4 @@
-@import "./SCSS/AppColors";
+@import "./SharedSCSS/Variables/AppColors";
 
 body,
 html {
@@ -9,7 +9,7 @@ html {
   font-family: "Poppins", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #ffffff;
+  background: $white;
 }
 
 button {
@@ -27,7 +27,7 @@ button {
 }
 
 ::placeholder {
-  color: $blackColor;
+  color: $black;
   opacity: 0.8;
 }
 
