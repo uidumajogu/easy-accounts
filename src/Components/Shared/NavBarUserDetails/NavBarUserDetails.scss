@@ -1,0 +1,30 @@
+@import "../../../SharedSCSS/Variables/Mixins";
+@import "../../../SharedSCSS/Variables/Dimensions";
+@import "../../../SharedSCSS/Variables/AppColors";
+
+.navbar-user-details-wrapper {
+  @include flex(row);
+  align-items: center;
+}
+
+.navbar-user-details {
+  @include flex(column);
+  justify-content: center;
+  align-items: flex-end;
+  padding-right: calc(5px + 0.5vw);
+
+  h6 {
+    font-size: calc(8px + 0.5vw);
+  }
+
+  p {
+    font-size: calc(5px + 0.5vw);
+    color: $lightGrey;
+  }
+}
+
+.navbar-user-icon {
+  height: calc(15px + 1vw);
+  width: calc(15px + 1vw);
+  color: $lightGrey;
+}
