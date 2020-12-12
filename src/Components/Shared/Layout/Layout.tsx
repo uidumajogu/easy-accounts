@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { FC, ReactNode, useEffect, useState } from "react";
 import { FiMenu } from "react-icons/fi";
 import { useLocation } from "react-router-dom";
 import menus from "../../../Data/menus";
@@ -8,12 +8,14 @@ import SideBar from "../SideBar/SideBar";
 import "./Layout.scss";
 import Logo from "../../../Logo/logo.png";
 
+type Props = {
+  children?: ReactNode;
+}
 
-const Layout = ()  =>
+const Layout:FC<Props> = ({children})  =>
 {
   const location = useLocation();
   const [title, setTitle] = useState<string>("")
-  const [component, setComponent] = useState<(() => JSX.Element) | null>(null)
   useEffect(() =>
   {
     
@@ -22,7 +24,6 @@ const Layout = ()  =>
       if (menu.path === location.pathname)
       {
         setTitle(menu.title)
-        setComponent(menu.component)
       }
     })
 
@@ -44,7 +45,7 @@ const Layout = ()  =>
           <NavBarUserDetails/>
         </div>
         <div className="layout-right-section-body">
-          {component}
+          {children}
           </div>
       </div>
     </div>

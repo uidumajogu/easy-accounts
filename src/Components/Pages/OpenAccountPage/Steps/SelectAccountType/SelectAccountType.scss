@@ -1,0 +1,48 @@
+@import "../../../../../SharedSCSS/Variables/Mixins";
+@import "../../../../../SharedSCSS/Variables/AppColors";
+@import "../../../../../SharedSCSS/Variables/Dimensions";
+
+.select-account-type-wrapper {
+  @include flex(column);
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding-top: calc(50px + 5vw);
+
+  h4 {
+    color: $primary;
+    font-size: calc(10px + 1vw);
+  }
+}
+
+.select-account-type-buttons {
+  @include flex(row);
+  justify-content: center;
+  align-items: center;
+}
+
+.select-account-type-button {
+  width: calc(100px + 5vw);
+  height: calc(100px + 5vw);
+  border: 2px solid $lightPrimary;
+  background-color: $offWhite;
+  border-radius: 5px;
+  margin: calc(10px + 1vw);
+  color: $lightGrey;
+  font-size: calc(5px + 0.8vw);
+
+  h6 {
+    color: $black;
+    font-size: calc(10px + 1vw);
+  }
+}
+
+.select-account-type-button:hover {
+  background-color: $lightPrimary;
+  color: $black;
+}
+
+.select-account-type-button-icon {
+  width: calc(30px + 1vw);
+  height: calc(30px + 1vw);
+}

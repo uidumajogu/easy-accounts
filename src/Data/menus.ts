@@ -22,28 +22,24 @@ const menus:TMenus  = [
     title: "Dashboard",
     path: "/dashboard",
     component: DashboardPage,
-    layoutComponent,
   },
   {
     icon: FiBookOpen,
     title: "Open Account",
     path: "/open-account",
     component: OpenAccountPage,
-    layoutComponent,
   },
     {
     icon: FiColumns,
     title: "Set Limit",
     path: "/set-limit",
     component: SetLimitPage,
-    layoutComponent,
   },
     {
     icon: FiBriefcase,
     title: "Mandate",
     path: "/mandate",
     component: MandatePage,
-    layoutComponent,
   },
 
 ];
