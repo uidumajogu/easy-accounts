@@ -1,11 +1,14 @@
 
+import Layout from "../../Shared/Layout/Layout";
 import "./MandatePage.scss";
 
 
 
 const MandatePage = () => {
   return (
-    <div className="mandate-page-wrapper">Mandate</div>
+    <Layout>
+      <div className="mandate-page-wrapper">Mandate</div>
+      </Layout>
   );
 };
 

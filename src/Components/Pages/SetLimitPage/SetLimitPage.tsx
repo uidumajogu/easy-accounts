@@ -1,11 +1,14 @@
 
+import Layout from "../../Shared/Layout/Layout";
 import "./SetLimitPage.scss";
 
 
 
 const SetLimitPage = () => {
   return (
-    <div className="set-limit-page-wrapper">Set Limit</div>
+    <Layout>
+      <div className="set-limit-page-wrapper">Set Limit</div>
+      </Layout>
   );
 };
 
