@@ -1,8 +1,14 @@
 
 import { FC, ReactNode, useEffect, useState } from "react";
+import { useSelector } from "react-redux";
 import { v4 } from "uuid";
 import "./StepContainer.scss";
 import Trapezoid from "./Trapezoid/Trapezoid";
+
+
+type TReduxStateSelector = {
+  enableNext: boolean;
+}
 
 type Props = {
   children?: ReactNode;
@@ -14,9 +20,9 @@ type Props = {
 }
 
 
-const StepContainer: FC<Props> =({ children, totalSteps, currentStep, stepStartAt = null, onClickPrevious, onClickNext }) =>
+const StepContainer: FC<Props> =({ children, totalSteps, currentStep = 0, stepStartAt = null, onClickPrevious, onClickNext }) =>
 {
-  
+    const enableNextStatus:any = useSelector<TReduxStateSelector>(state => state.enableNext)
   const [activeTab, setActiveTab] = useState<string>("Single");
   const [stepsArray, setStepsArray] = useState<number[]>([]);
 
@@ -50,13 +56,13 @@ const StepContainer: FC<Props> =({ children, totalSteps, currentStep, stepStartA
         </div>
         {stepStartAt && <div className="step-container-footer">
           <div className="step-container-footer-step-indicators">
-            {stepsArray.map((step) => <div key={v4()} className={`step-container-footer-step-indicator ${step === currentStep && "step-container-footer-step-indicator-active"}`}>
+            {stepsArray.map((step) => <div key={v4()} className={`step-container-footer-step-indicator ${step <= currentStep && "step-container-footer-step-indicator-active"}`}>
             </div>)}
 
           </div>
           <div className="step-container-footer-buttons">
-            <button className="transparent-button step-container-footer-button" onClick={onClickPrevious}>Previous</button>
-            <button className="transparent-button step-container-footer-button step-container-footer-button-next " onClick={onClickNext}>Next</button>
+            <button className="step-container-footer-button" onClick={onClickPrevious}>Previous</button>
+            <button className={`step-container-footer-button step-container-footer-button-next ${!enableNextStatus && "step-container-footer-button-next-disabled"}`} disabled={!enableNextStatus} onClick={onClickNext}>Next</button>
           </div>
         </div>}
         </div>

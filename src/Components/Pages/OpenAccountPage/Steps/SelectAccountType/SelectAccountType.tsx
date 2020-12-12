@@ -1,6 +1,7 @@
 
 import { FC } from "react";
 import { FiBriefcase, FiUser } from "react-icons/fi";
+import Step from "../Step";
 import "./SelectAccountType.scss";
 
 type Props = {
@@ -12,6 +13,7 @@ const SelectAccountType:FC<Props> = ({onSelect}) =>
 {
 
   return (
+    <Step>
     <div className="select-account-type-wrapper">
       <h4>Select Account Type</h4>
 
@@ -30,7 +32,8 @@ const SelectAccountType:FC<Props> = ({onSelect}) =>
 
       </div>
 
-     </div>
+      </div>
+      </Step>
   );
 };
 

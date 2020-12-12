@@ -1,0 +1,13 @@
+@import "../../../SharedSCSS/Variables/AppColors";
+@import "../../../SharedSCSS/Variables/Mixins";
+
+.input-box-wrapper {
+  width: 100%;
+  border-radius: 5px;
+  padding: calc(3px + 0.3vw) calc(10px + 0.5vw);
+  background-color: $offWhite;
+
+  input {
+    font-size: calc(10px + 1vw);
+  }
+}

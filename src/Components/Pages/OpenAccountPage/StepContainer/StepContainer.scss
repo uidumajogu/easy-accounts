@@ -72,6 +72,8 @@
   width: calc(50px + 5vw);
   height: 85%;
   font-weight: bold;
+  border: none;
+  background-color: transparent;
 }
 
 .step-container-footer-button:hover {
@@ -80,5 +82,13 @@
 
 .step-container-footer-button-next {
   color: $white;
-  background-color: $primary !important;
+  background-color: $primary;
+}
+
+.step-container-footer-button-next-disabled {
+  background-color: $lightGrey;
+}
+
+.step-container-footer-button-next-disabled:hover {
+  color: $white;
 }

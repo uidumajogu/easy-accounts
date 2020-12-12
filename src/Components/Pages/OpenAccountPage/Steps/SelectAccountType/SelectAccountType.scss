@@ -2,19 +2,6 @@
 @import "../../../../../SharedSCSS/Variables/AppColors";
 @import "../../../../../SharedSCSS/Variables/Dimensions";
 
-.select-account-type-wrapper {
-  @include flex(column);
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  padding-top: calc(50px + 5vw);
-
-  h4 {
-    color: $primary;
-    font-size: calc(10px + 1vw);
-  }
-}
-
 .select-account-type-buttons {
   @include flex(row);
   justify-content: center;

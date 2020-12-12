@@ -1,0 +1,17 @@
+@import "../../../../../SharedSCSS/Variables/Mixins";
+@import "../../../../../SharedSCSS/Variables/AppColors";
+
+.is-existing-customer-radio-buttons {
+  @include flex(row);
+  align-items: center;
+  padding-top: calc(3px + 0.3vw);
+}
+
+.is-existing-customer-id-section {
+  padding-top: calc(10px + 3vw);
+  width: calc(150px + 15vw);
+
+  h4 {
+    margin-bottom: calc(3px + 0.3vw);
+  }
+}

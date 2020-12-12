@@ -1,0 +1,41 @@
+@import "../../../SharedSCSS/Variables/Mixins";
+@import "../../../SharedSCSS/Variables/AppColors";
+
+.radio-button-wrapper {
+  @include flex(row);
+  align-items: center;
+  padding: calc(5px + 0.5vw);
+}
+
+.radio-button {
+  @include flex(row);
+  align-items: center;
+  justify-content: center;
+  min-width: calc(20px + 2vw);
+  min-height: calc(20px + 2vw);
+  border: 1px solid $lightGrey;
+  border-radius: 100%;
+  margin-right: calc(3px + 0.3vw);
+  cursor: pointer;
+}
+
+.radio-button:hover {
+  border: 2px solid $black;
+}
+
+.radio-button-active {
+  border: 2px solid $black;
+}
+
+.radio-button-icon {
+  width: calc(15px + 2vw);
+  height: calc(15px + 2vw);
+}
+
+.radio-button-label {
+  font-size: calc(10px + 1vw);
+}
+
+.radio-button-label-active {
+  font-weight: bold;
+}
