@@ -57,7 +57,7 @@ const OpenAccountPage = () =>
   return (
     <Layout>
       <div className="open-account-page-wrapper">
-        {accountType ? <StepContainer totalSteps={7} currentStep={activeStepIndex} stepStartAt={1} onClickPrevious={handlePrevious} onClickNext={handleNext} >
+        {accountType ? <StepContainer tab="Single" totalSteps={7} currentStep={activeStepIndex} stepStartAt={1} onClickPrevious={handlePrevious} onClickNext={handleNext} >
           {accountType === "Individual" && <Fragment>
             {activeStepIndex === 1 && <IsExistingCustomer />}
             {activeStepIndex === 2 && <EnterCustomerBVN />}
@@ -68,7 +68,7 @@ const OpenAccountPage = () =>
           </Fragment> }
           
         </StepContainer> :
-        <StepContainer>
+        <StepContainer tab="Single">
             <SelectAccountType onSelect={(t)=>handleAccountTypeSelected(t)}/>
         </StepContainer>
         }

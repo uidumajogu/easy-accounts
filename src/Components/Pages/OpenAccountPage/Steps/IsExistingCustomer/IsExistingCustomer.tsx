@@ -56,6 +56,7 @@ const IsExistingCustomer = () =>
     dispatch({type:"accountOpeningData", value: copyOfAccountOpeningData})
     }
   
+  console.log("currentAccountOpeningData", currentAccountOpeningData)
 
   return (
     <Step>
@@ -63,11 +64,11 @@ const IsExistingCustomer = () =>
         <h4>Is an existing customer?</h4>
 
         <div className="is-existing-customer-radio-buttons">
-          <RadioButtons labels={["Yes", "No"]} value={currentAccountOpeningData && currentAccountOpeningData.isExistingCustomer ? currentAccountOpeningData.isExistingCustomer : ""} onSelect={(s)=>handleSelection(s)}/>
+          <RadioButtons labels={["Yes", "No"]} value={currentAccountOpeningData?.isExistingCustomer ? currentAccountOpeningData.isExistingCustomer : ""} onSelect={(s)=>handleSelection(s)}/>
         </div>
 
         
-        {currentAccountOpeningData?.isExistingCustomer && <div className="is-existing-customer-id-section">
+        {currentAccountOpeningData?.isExistingCustomer === "Yes" && <div className="is-existing-customer-id-section">
           <h4>Enter customer ID</h4>
           <TextInputBox type="number" placeholder="Customer ID" value={currentAccountOpeningData.customerID ? currentAccountOpeningData.customerID : ""} onChange={(e) => handleCustomerIDInput(e)} />
         </div>}

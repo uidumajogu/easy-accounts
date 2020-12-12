@@ -11,6 +11,7 @@ type TReduxStateSelector = {
 }
 
 type Props = {
+  tab: "Single" | "Bulk";
   children?: ReactNode;
   totalSteps?: number;
   currentStep?: number;
@@ -20,7 +21,7 @@ type Props = {
 }
 
 
-const StepContainer: FC<Props> =({ children, totalSteps, currentStep = 0, stepStartAt = null, onClickPrevious, onClickNext }) =>
+const StepContainer: FC<Props> =({tab, children, totalSteps, currentStep = 0, stepStartAt = null, onClickPrevious, onClickNext }) =>
 {
     const enableNextStatus:any = useSelector<TReduxStateSelector>(state => state.enableNext)
   const [activeTab, setActiveTab] = useState<string>("Single");
@@ -52,7 +53,7 @@ const StepContainer: FC<Props> =({ children, totalSteps, currentStep = 0, stepSt
           <Trapezoid title="Bulk" active={activeTab === "Bulk"} onClick={(t)=>setActiveTab(t)}/>
         </div>
         <div className="step-container-body">
-          {children}
+          {activeTab === tab && children}
         </div>
         {stepStartAt && <div className="step-container-footer">
           <div className="step-container-footer-step-indicators">
