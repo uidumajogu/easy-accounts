@@ -1,0 +1,57 @@
+@import "../../../../../SharedSCSS/Variables/Mixins";
+@import "../../../../../SharedSCSS/Variables/AppColors";
+@import "../../../../../SharedSCSS/Variables/Dimensions";
+
+.trapezoid-wrapper {
+  position: relative;
+  width: calc(100px + 4vw);
+  height: 100%;
+}
+
+.trapezoid-background {
+  border-left: calc(10px + 1vw) solid transparent;
+  border-right: calc(10px + 1vw) solid transparent;
+  height: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.trapezoid-button-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  @include flex(row);
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  z-index: 2;
+
+  button {
+    height: 100%;
+    width: 100%;
+    font-size: calc(8px + 1vw);
+    color: $lightGrey;
+  }
+
+  button:hover {
+    color: $black;
+    font-weight: bold;
+  }
+}
+
+.trapezoid-background-active {
+  border-bottom: calc(20px + 3vw) solid $white;
+}
+
+.trapezoid-button-container-active {
+  button {
+    font-weight: bold;
+    color: $black;
+  }
+}

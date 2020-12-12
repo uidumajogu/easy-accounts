@@ -1,0 +1,84 @@
+@import "../../../../SharedSCSS/Variables/Mixins";
+@import "../../../../SharedSCSS/Variables/AppColors";
+@import "../../../../SharedSCSS/Variables/Dimensions";
+
+.step-container-wrapper {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background-color: $offWhite;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.05);
+}
+
+.step-container-overlay {
+  @include flex(column);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: $white;
+}
+
+.step-container-tabs {
+  @include flex(row);
+  padding: 0 $generalPadding;
+  background-color: $offWhite;
+  height: calc(25px + 3vw);
+  align-items: flex-end;
+}
+
+.step-container-body {
+  flex: 1;
+}
+
+.step-container-footer {
+  @include flex(row);
+  justify-content: space-between;
+  align-items: center;
+  background-color: $offWhite;
+  height: calc(25px + 1vw);
+  padding: 0 calc(5px + 0.5vw);
+}
+
+.step-container-footer-step-indicators {
+  @include flex(row);
+  align-items: center;
+}
+
+.step-container-footer-step-indicator {
+  border-radius: 100%;
+  background-color: $lightPrimary;
+  min-width: calc(2px + 1vw);
+  min-height: calc(2px + 1vw);
+  margin-right: calc(1px + 0.3vw);
+  @include flex(row);
+  justify-content: center;
+  align-items: center;
+}
+
+.step-container-footer-step-indicator-active {
+  background-color: $primary;
+}
+
+.step-container-footer-buttons {
+  @include flex(row);
+  align-items: center;
+  height: 100%;
+}
+
+.step-container-footer-button {
+  color: $lightGrey;
+  width: calc(50px + 5vw);
+  height: 85%;
+  font-weight: bold;
+}
+
+.step-container-footer-button:hover {
+  color: $black;
+}
+
+.step-container-footer-button-next {
+  color: $white;
+  background-color: $primary !important;
+}

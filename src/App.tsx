@@ -12,7 +12,7 @@ const App = () =>
       <Switch>
         <Route exact={true} path="/" component={LandingPage} />
         <Route exact={true} path="/" component={LandingPage} />
-        {menus.map((menu) =><Route key={v4()} exact={true} path={menu.path} component={menu.routeComponent} /> 
+        {menus.map((menu) =><Route key={v4()} exact={true} path={menu.path} component={menu.layoutComponent} /> 
           )}
         <Route exact={true} path="/404" component={PageNotFound} />
         <Redirect to="/404" />

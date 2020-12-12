@@ -5,7 +5,7 @@ import "./DashboardPage.scss";
 
 const DashboardPage = () => {
   return (
-    <div></div>
+    <div className="dashboard-page-wrapper">Dashboard</div>
   );
 };
 

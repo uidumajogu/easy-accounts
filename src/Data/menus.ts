@@ -3,7 +3,9 @@ import { FiColumns } from "react-icons/fi";
 import { FiBriefcase } from "react-icons/fi";
 import { FiBookOpen } from "react-icons/fi";
 import DashboardPage from "../Components/Pages/DashboardPage/DashboardPage";
+import MandatePage from "../Components/Pages/MandatePage/MandatePage";
 import OpenAccountPage from "../Components/Pages/OpenAccountPage/OpenAccountPage";
+import SetLimitPage from "../Components/Pages/SetLimitPage/SetLimitPage";
 import Layout from "../Components/Shared/Layout/Layout";
 import { TMenu } from "../TypescriptUtils/Types";
 
@@ -11,7 +13,7 @@ import { TMenu } from "../TypescriptUtils/Types";
 
 type TMenus = TMenu[]
 
-const routeComponent = Layout;
+const layoutComponent = Layout;
 
 
 const menus:TMenus  = [
@@ -20,29 +22,30 @@ const menus:TMenus  = [
     title: "Dashboard",
     path: "/dashboard",
     component: DashboardPage,
-    routeComponent,
+    layoutComponent,
   },
   {
     icon: FiBookOpen,
     title: "Open Account",
     path: "/open-account",
     component: OpenAccountPage,
-    routeComponent,
+    layoutComponent,
   },
-  {
+    {
     icon: FiColumns,
     title: "Set Limit",
     path: "/set-limit",
-    component: DashboardPage,
-    routeComponent,
+    component: SetLimitPage,
+    layoutComponent,
   },
-  {
+    {
     icon: FiBriefcase,
     title: "Mandate",
     path: "/mandate",
-    component: DashboardPage,
-    routeComponent,
+    component: MandatePage,
+    layoutComponent,
   },
+
 ];
 
 export default menus;

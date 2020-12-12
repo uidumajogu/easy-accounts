@@ -28,3 +28,9 @@
   width: calc(15px + 1vw);
   color: $lightGrey;
 }
+
+@media only screen and (max-width: 400px) {
+  .navbar-user-details {
+    display: none;
+  }
+}
